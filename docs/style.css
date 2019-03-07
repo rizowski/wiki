@@ -1,0 +1,127 @@
+
+
+:root {
+  --theme-color: #727272;
+  --theme-color-dark: #535353;
+
+  --text-color-base: #161616;
+  --text-color-secondary: #303030;
+  --text-color-tertiary: #424242;
+}
+
+section.cover {
+  height: auto;
+  min-height: 100vh;
+  background: var(--theme-color-dark) !important;
+}
+
+section.cover .cover-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 32px 16px 0;
+}
+
+section.cover img {
+  width: 400px;
+}
+
+section.cover h1 {
+  margin: 0.625rem 0 1rem;
+}
+
+section.cover blockquote,
+section.cover blockquote p {
+  margin: 0;
+}
+
+section.cover ul {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  display: grid;
+  text-align: left;
+  grid-column-gap: 16px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(2, 50%);
+  list-style: none;
+  max-width: unset;
+  margin: 1.5em 0;
+}
+
+section.cover ul li {
+  white-space: nowrap;
+}
+
+section.cover.show ~ .sidebar,
+section.cover.show ~ .sidebar-toggle {
+  display: none;
+}
+
+
+
+.sidebar-toggle {
+  cursor: pointer;
+}
+
+body .sidebar-toggle {
+  background: none;
+  top: 1.5rem;
+  left: calc(300px + 1.5rem);
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  transition: left 0.25s ease-out;
+}
+
+body .sidebar-toggle span {
+  background-color: var(--theme-color);
+  height: 0.2rem;
+  width: 1.5rem;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  transform-origin: 0;
+  border-radius: 1px;
+}
+
+body.close .sidebar-toggle {
+  transition: left 0.25s ease-out;
+  width: 1.5rem;
+  height: 1.5rem;
+  left: 1.5rem;
+}
+
+body.close .sidebar-toggle span {
+  transform-origin: center;
+}
+
+body .sidebar-toggle span:nth-child(1) {
+  top: 0;
+}
+body .sidebar-toggle span:nth-child(2) {
+  top: 0.5rem;
+}
+body .sidebar-toggle span:nth-child(3) {
+  top: 1rem;
+}
+
+.sidebar-toggle:hover {
+  opacity: 0.8;
+}
+.sidebar-toggle .sidebar-toggle-button:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  body .sidebar-toggle {
+    left: 1rem;
+  }
+
+  body.close .sidebar-toggle {
+    left: calc(300px + 1.5rem);
+  }
+}
+
