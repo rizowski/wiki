@@ -25,13 +25,18 @@
       window.$docsify = {
         name: "Rizowski's wiki",
         repo: '',
+        formatUpdated: '{MM}/{DD} {HH}:{mm}',
         // logo: '/_media/logo.svg',
         autoHeader: true,
+        auto2top: true,
+        subMaxLevel: 3,
         // onlyCover: true,
         coverpage: true,
         loadSidebar: true,
         alias: {
           '/.*/_sidebar.md': '/_sidebar.md',
+          '/projects/eslint-watch':
+            'https://github.com/rizowski/eslint-watch/blob/master/README.md',
         },
         search: {
           paths: 'auto',
@@ -40,7 +45,7 @@
         },
         ga: 'UA-20851043-14',
         disqus: 'rizowski-wiki',
-        routerMode: 'history',
+        // routerMode: 'history',
       };
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>

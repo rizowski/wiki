@@ -1,14 +1,20 @@
 
 
 :root {
-  --theme-color: #727272;
-  --theme-color-dark: #535353;
+  --theme-color: #2D3A3A;
+  --theme-color-dark: #040F0F;
 
-  --text-color-base: #161616;
-  --text-color-secondary: #303030;
-  --text-color-tertiary: #424242;
+  --text-color-base: #FCFFFC;
+  --text-color-secondary: #248232;
+  --text-color-tertiary: #2BA84A;
 }
 
+.sidebar, body {
+  background-color: var(--theme-color-dark) !important;
+}
+input[type=search] {
+  background: var(--theme-color-dark) !important;
+}
 section.cover {
   height: auto;
   min-height: 100vh;
@@ -125,3 +131,10 @@ body .sidebar-toggle span:nth-child(3) {
   }
 }
 
+.markdown-section a {
+  color: var(--text-color-secondary) !important;
+}
+
+.sidebar ul li.active>a  {
+  color: var(--text-color-tertiary) !important;
+}
