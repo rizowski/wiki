@@ -16,7 +16,7 @@ input[type=search] {
 section.cover {
   height: auto;
   min-height: 100vh;
-  background: var(--theme-color-dark);
+  background: var(--theme-color-dark) !important;
 }
 
 section.cover .cover-main {
